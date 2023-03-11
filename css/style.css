@@ -203,33 +203,50 @@ a{
 
 /* Mobile Responsive */
 
+@media (max-width: 1440px) {
+    .sub-header{
+        padding: 40px 10px;
+
+    }
+}
+
 @media (max-width: 768px) {
+    h4{
+        font-size: 14px;
+    }
+
     .header{
-        height: 83vh;
+        /* height: 83vh */
+        height: 605px;
     }
 
     .header-nav{
-        padding: 10px 15px;
+        padding: 20px 20px;
+    }
+    
+    .header-nav img{
+        width: 60px;
     }
 
     .header-text-box{
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .header-text-box img{
-        width: 120px;
+        width: 160px;
         height: 100%;
     }
 
     .header-text-box .header-text{
         text-align: center;
-        font-size: 14px;
-        padding: 0px 25px;
+        font-size: 16px;
+        padding: 0px 50px;
     }
 
     .header-text-box .btn{
-        padding: 10px 70px;
-        font-size: 12px;
+        padding: 15px 90px;
+        font-size: 14px;
+        font-weight: bold;
     }
 
     .mobile-h4{
@@ -257,8 +274,9 @@ a{
     }
 
     .sub-header .header-text{
-        font-size: 12px;
+        font-size: 16px;
         margin-top: 5px;
+        padding: 5px 40px 0px 40px;
     }
 
     .subheader-text-box h4{
@@ -272,5 +290,9 @@ a{
 
     .sub-header .subheader-btn-box .btn{
         margin-bottom: 2px;
+        padding: 15px 30px;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 2px;
     }
 }
