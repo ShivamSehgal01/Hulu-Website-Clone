@@ -69,6 +69,114 @@ a{
     font-size: 8px;
 }
 
+/* hamburger */
+.hamburger{
+    display: none;
+    height: 35px;
+    width: 35px;
+    background-color: #323843;
+    border-radius: 5px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+    transition: all .3s ease;
+    animation: loading .5s;
+}
+
+.hamburgur-top, 
+.hamburgur-mid,
+.hamburgur-bottom {
+    
+    width: 20px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 8px 7px;
+    z-index: 2;
+    transform: rotate(0);
+    transition: all .2s ease;
+}
+
+.hamburgur-mid{
+    transform: translateY(7px);
+}
+
+.hamburgur-bottom{
+    transform: translateY(14px);
+}
+
+.open .hamburgur-top{
+    transform: rotate(45deg) translateX(6px) translateY(6px);
+}
+
+
+.open .hamburgur-mid{
+    display: none;
+}
+
+.open .hamburgur-bottom{
+    transform: rotate(-45deg) translateX(-6px) translateY(6px);
+}
+
+/* Mobile Menu */
+.mobile-nav-box{
+    display: none;
+    background-color: #323843;
+    padding: 20px 5px 5px 5px;
+    text-align: center;
+    margin: 0px 10px;
+    border-radius: 5px;
+}
+
+
+.mobile-nav-box .mobile-text{
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .4px;
+    opacity: .7;
+}
+
+.mobile-nav-box .mobile-login{
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: .4px;
+    opacity: .7;
+}
+
+
+.mobile-nav-box .mobile-btn{
+    background-color: #0b0c0f;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 0px;
+}
+
+.mobile-btn:hover{
+    background-color: #000;
+}
+
+.mobile-nav-open{
+    display: block;
+    animation: loading 1s;
+}
+
+@keyframes loading {
+    from{
+        opacity: .1;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 /* header */
 
 .header{
@@ -482,6 +590,14 @@ a{
 }
 
 @media (max-width: 768px) {
+    .btn-cta{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }    
+
     h4{
         font-size: 14px;
     }
@@ -702,7 +818,7 @@ a{
     }
 
     .legal-link-box > div{
-        /* width: 110px; */
+        width: 250px;
     }
 
     .legal-links a{
@@ -711,5 +827,4 @@ a{
         align-self: flex-start;
         opacity: 0.9;
     }
-
 }
